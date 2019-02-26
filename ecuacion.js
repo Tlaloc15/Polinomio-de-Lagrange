@@ -7,23 +7,31 @@ function Calcular() {
     var x0 = document.querySelector('#x0');
     var x1 = document.querySelector('#x1');
     var x2 = document.querySelector('#x2');
+    var x3 = document.querySelector('#x3');
     var x = document.querySelector('#x');
     var f0 = document.querySelector('#f0');
     var f1 = document.querySelector('#f1');
     var f2 = document.querySelector('#f2');
+    var f3 = document.querySelector('#f3');
     var fx1 = document.querySelector('#fx1');
     var fx2 = document.querySelector('#fx2');
+    var fx3 = document.querySelector('#fx3');
 
 
     var fx1 = (f0.value)*((x.value)-(x1.value))/((x0.value)-(x1.value))+(f1.value)*((x.value)-(x0.value))/((x1.value)-(x0.value));
 
     var fx2 = ((((x.value)-(x1.value))/((x0.value)-(x1.value)))*(((x.value)-(x2.value))/((x0.value)-(x2.value)))*(f0.value))+((((x.value)-(x0.value))/((x1.value)-(x0.value)))*(((x.value)-(x2.value))/((x1.value)-(x2.value)))*(f1.value))+((((x.value)-(x0.value))/((x2.value)-(x0.value)))*(((x.value)-(x1.value))/((x2.value)-(x1.value)))*(f2.value));
+
+    var fx3 = ((((x.value)-(x1.value))/((x0.value)-(x1.value)))*(((x.value)-(x2.value))/((x0.value)-(x2.value)))*(((x.value)-(x3.value))/((x0.value)-(x3.value)))*(f0.value))+((((x.value)-(x0.value))/((x1.value)-(x0.value)))*(((x.value)-(x2.value))/((x1.value)-(x2.value)))*(((x.value)-(x3.value))/((x1.value)-(x3.value)))*(f1.value))+((((x.value)-(x0.value))/((x2.value)-(x0.value)))*(((x.value)-(x1.value))/((x2.value)-(x1.value)))*(((x.value)-(x3.value))/((x2.value)-(x3.value)))*(f2.value))+((((x.value)-(x0.value))/((x2.value)-(x0.value)))*(((x.value)-(x1.value))/((x2.value)-(x1.value)))*(((x.value)-(x2.value))/((x3.value)-(x2.value)))*(f3.value));
     
     var inputFx1 = document.querySelector('#fx1');
     inputFx1.value = fx1;
 
     var inputFx2 = document.querySelector('#fx2');
     inputFx2.value = fx2;
+
+    var inputFx3 = document.querySelector('#fx3');
+    inputFx3.value = fx3;
 }
 
 
@@ -44,6 +52,9 @@ fx2 = (((x-x1)/(x0-x1))*((x-x2)/(x0-x2))*f0)+(((x-x0)/(x1-x0))*((x-x2)/(x1-x2))*
 
 console.log(fx1);
 console.log(fx2);
+
+
+
 
 
 
