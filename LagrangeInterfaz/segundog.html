@@ -50,9 +50,9 @@
               </div>
               <div class="collapse navbar-collapse">
                    <ul class="nav navbar-nav navbar-right">
-                      <li class="active"><a href="lineal.html">Interpolación Lineal</a></li>
-                      <li><a href="segundog.html">Interpolación de 2do grado</a></li>
-                      <li class="active"><a href="tercerg.html">Interpolación de 3er grado</a></li>
+                    <li class="active"><a href="lineal.html">Interpolación Lineal</a></li>
+                    <li><a href="segundog.html">Interpolación Cuadrática</a></li>
+                    <li class="active"><a href="tercerg.html">Interpolación Cúbica</a></li>
                    </ul>
               </div>
     
@@ -68,9 +68,9 @@
               <div class="row">
     
                    <div class="col-md-12 col-sm-12">
-                        <h1>INTERPOLACIÓN DE SEGUNDO GRADO DE LAGRANGE</h1>
+                        <h1>INTERPOLACIÓN CUADRÁTICA DE LAGRANGE</h1>
                         <h4>Ingeniería de Software 2k</h4>
-                        <a href="#blog" class="smoothScroll btn btn-default">Descubre Más</a>
+                        <a href="#contact" class="smoothScroll btn btn-default">Descubre Más</a>
                    </div>
     
               </div>
@@ -79,16 +79,72 @@
 
 <!-- Segundo Grado Section -->
 
-<section id="gallery">
-     <div class="container">
-          <div class="row">
-
-               <div>
-                 <p>Inserte metodo de 2do grado</p>
-               </div>
-
+<section id="contact">
+  <div class="container">
+      
+       <div class="row">
+          <div class="justify-content-center">
+              <h3>Inserte los valores de las variables</h3>
+              <hr>
           </div>
-     </div>
+            <form>
+                 <div class="form-row">
+                      <div class="form-group col-md-6">
+                           <label for="inputEmail4">X</label>
+                           <input type="text" class="form-control" id="x" placeholder="valor de x">
+                      </div>
+                      <div class="form-group col-md-6">
+                           <label for="inputPassword4">f(x)</label>
+                           <input type="text" class="form-control" id="fx" placeholder="valor de f(x)">
+                      </div>
+                      <div class="form-group col-md-6">
+                           <label for="inputEmail4">X0</label>
+                           <input type="text" class="form-control" id="x0" placeholder="valor de x0">
+                      </div>
+                      <div class="form-group col-md-6">
+                           <label for="inputPassword4">f(x0)</label>
+                           <input type="text" class="form-control" id="fx0" placeholder="valor de f(x0)">
+                      </div>
+                 </div>
+                 <div class="form-row">
+                      <div class="form-group col-md-6">
+                           <label for="inputEmail4">X1</label>
+                           <input type="text" class="form-control" id="x1" placeholder="valor de x1">
+                      </div>
+                      <div class="form-group col-md-6">
+                           <label for="inputPassword4">f(x1)</label>
+                           <input type="text" class="form-control" id="fx1" placeholder="valor de f(x1)">
+                      </div>
+                      <div class="form-row">
+                           <div class="form-group col-md-6">
+                                <label for="inputEmail4">X2</label>
+                                <input type="text" class="form-control" id="x2" placeholder="valor de x2">
+                           </div>
+                           <div class="form-group col-md-6">
+                                <label for="inputPassword4">f(X2)</label>
+                                <input type="text" class="form-control" id="fx2" placeholder="valor de f(x2)">
+                           </div>
+                      </div>
+                      <br>
+                      <div class="row justify-content-center">
+                           <div class="col-4 text-center border">
+                                <button type="button" class="btn btn-secondary  btn-lg" id="btn2">Calcular</button>
+                           </div>
+                           <br>
+                           <div class="form-row">
+                              <div class="form-group col-md-6">
+                                   <label for="inputEmail4">Aproximación</label>
+                                   <input type="text" class="form-control" id="res2" placeholder="Resultado de aproximación">
+                              </div>
+                              <div class="form-group col-md-6">
+                                   <label for="inputPassword4">Error Relativo Porcentual</label>
+                                   <input type="texte" class="form-control" id="porce" placeholder="Resultado del error">
+                              </div>
+                         </div>
+            </form>
+
+       </div>
+  </div>
 </section>
 
 <!-- Footer Section -->
@@ -146,5 +202,8 @@
 <script src="js/jquery.parallax.js"></script>
 <script src="js/custom.js"></script>
 
+
+
 </body>
+<script src="ecuaciones2.js"></script>
 </html>

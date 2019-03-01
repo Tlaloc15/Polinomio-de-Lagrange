@@ -50,9 +50,9 @@
          </div>
          <div class="collapse navbar-collapse">
               <ul class="nav navbar-nav navbar-right">
-                   <li class="active"><a href="lineal.html">Interpolación Lineal</a></li>
-                   <li><a href="segundog.html">Interpolación de 2do grado</a></li>
-                   <li class="active"><a href="tercerg.html">Interpolación de 3er grado</a></li>
+                <li class="active"><a href="lineal.html">Interpolación Lineal</a></li>
+                <li><a href="segundog.html">Interpolación Cuadrática</a></li>
+                <li class="active"><a href="tercerg.html">Interpolación Cúbica</a></li>
               </ul>
          </div>
 
@@ -70,23 +70,96 @@
               <div class="col-md-12 col-sm-12">
                    <h1>INTERPOLACIÓN LINEAL DE LAGRANGE</h1>
                    <h4>Ingeniería de Software 2k</h4>
-                   <a href="#blog" class="smoothScroll btn btn-default">Descubre Más</a>
+                   <a href="#about" class="smoothScroll btn btn-default">Descubre Más</a>
               </div>
 
          </div>
     </div>
 </section>
 
-<!-- About Section -->
+<!-- Metodo lineal Section -->
+
 
 <section id="about">
-     <div class="container">
-          <div class="row">
+    <div class="container">
+            <div class="justify-content-center">
+                    <h3>Inserte los valores de las variables</h3>
+                    <hr>
+                </div>
+         <div class="row">
+              <form name="form">
+                    <div class="form-row">
+                            <div class="form-group col-md-6">
+                            </div>
+                            <div class="form-group col-md-6">
+                                    <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="exampleRadios" id="log" value="option1" checked>
+                                            <label class="form-check-label" for="log">
+                                              Log ó Ln
+                                            </label>
+                                          </div>
+                                          <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="exampleRadios" id="ln" value="option2">
+                                            <label class="form-check-label" for="ln">
+                                              Situación real
+                                            </label>
+                                          </div>
+                                          
+                    </div>
+                   <div class="form-row">
+                        <div class="form-group col-md-6">
+                             <label for="inputEmail4">X</label>
+                             <input type="text" class="form-control" id="x" placeholder="valor de x">
+                        </div>
+                        <div class="form-group col-md-6">
+                             <label for="inputPassword4">f(x)</label>
+                             <input type="text" class="form-control" id="fx" name="fx" placeholder="valor de f(x)">
+                        </div>
 
-               <p>inserte metodo lineal</p>
+                        <div class="form-group col-md-6">
+                             <label for="inputEmail4">X0</label>
+                             <input type="text" class="form-control" id="x0" placeholder="valor de x0">
+                        </div>
+                        <div class="form-group col-md-6">
+                             <label for="inputPassword4">f(x0)</label>
+                             <input type="text" class="form-control" id="fx0" placeholder="valor de f(x0)">
+                        </div>
+                   </div>
+                   <div class="form-row">
+                        <div class="form-group col-md-6">
+                             <label for="inputEmail4">X1</label>
+                             <input type="text" class="form-control" id="x1" placeholder="valor de x1">
+                        </div>
+                        <div class="form-group col-md-6">
+                             <label for="inputPassword4">f(x1)</label>
+                             <input type="texte" class="form-control" id="fx1" placeholder="valor de f(x1)">
+                        </div>
+                   </div>
+                   <br>
+                   <div class="row justify-content-center">
+                        <div class="col-4 text-center border">
+                             <button type="button" class="btn btn-secondary btn-lg" id="btn1">Calcular</button>                                
+                         
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-row">
+                            <div class="form-group col-md-6">
+                                 <label for="inputEmail4">Aproximación</label>
+                                 <input type="text" class="form-control" id="res1" placeholder="Resultado de aproximación">
+                            </div>
+                            <div class="form-group col-md-6">
+                                 <label for="inputPassword4">Error Relativo Porcentual</label>
+                                 <input type="texte" class="form-control" id="porce" name="porce" placeholder="Resultado del error">
+                            </div>
+                       </div>
+              </form>
+              
 
-          </div>
-     </div>
+
+
+         </div>
+    </div>
 </section>
 
 <!-- Footer Section -->
@@ -141,6 +214,9 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.parallax.js"></script>
 <script src="js/custom.js"></script>
+
+<script src="ecuaciones.js">
+</script>
 
 </body>
 </html>

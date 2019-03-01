@@ -51,8 +51,8 @@ http://www.tooplate.com/view/2085-neuron
           <div class="collapse navbar-collapse">
                <ul class="nav navbar-nav navbar-right">
                     <li class="active"><a href="lineal.html">Interpolación Lineal</a></li>
-                    <li><a href="segundog.html">Interpolación de 2do grado</a></li>
-                    <li class="active"><a href="tercerg.html">Interpolación de 3er grado</a></li>
+                    <li><a href="segundog.html">Interpolación Cuadrática</a></li>
+                    <li class="active"><a href="tercerg.html">Interpolación Cúbica</a></li>
                </ul>
           </div>
 
@@ -79,11 +79,290 @@ http://www.tooplate.com/view/2085-neuron
 
 <!-- Blog Section -->
 
-<section >
-     <div class="container"id="blog">
+<section id="blog">
+     <div class="container">
           <div class="row">
 
-               <section id="3erG">Información acerca de el metodo de lagrange</section>
+               <h3>Fórmula general de la interpolación de Lagrange</h3>
+               <p>Dado un conjunto de <i>k</i>&#160;+&#160;1 puntos
+               </p>
+               <dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle (x_{0},y_{0}),\ldots ,(x_{k},y_{k})}">
+                 <semantics>
+                   <mrow class="MJX-TeXAtom-ORD">
+                     <mstyle displaystyle="true" scriptlevel="0">
+                       <mo stretchy="false">(</mo>
+                       <msub>
+                         <mi>x</mi>
+                         <mrow class="MJX-TeXAtom-ORD">
+                           <mn>0</mn>
+                         </mrow>
+                       </msub>
+                       <mo>,</mo>
+                       <msub>
+                         <mi>y</mi>
+                         <mrow class="MJX-TeXAtom-ORD">
+                           <mn>0</mn>
+                         </mrow>
+                       </msub>
+                       <mo stretchy="false">)</mo>
+                       <mo>,</mo>
+                       <mo>&#x2026;<!-- … --></mo>
+                       <mo>,</mo>
+                       <mo stretchy="false">(</mo>
+                       <msub>
+                         <mi>x</mi>
+                         <mrow class="MJX-TeXAtom-ORD">
+                           <mi>k</mi>
+                         </mrow>
+                       </msub>
+                       <mo>,</mo>
+                       <msub>
+                         <mi>y</mi>
+                         <mrow class="MJX-TeXAtom-ORD">
+                           <mi>k</mi>
+                         </mrow>
+                       </msub>
+                       <mo stretchy="false">)</mo>
+                     </mstyle>
+                   </mrow>
+                   <annotation encoding="application/x-tex">{\displaystyle (x_{0},y_{0}),\ldots ,(x_{k},y_{k})}</annotation>
+                 </semantics>
+               </math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/2cff89ad8da1948e6dee7d09c94d2ca7f2080dfa" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:20.088ex; height:2.843ex;" alt="{\displaystyle (x_{0},y_{0}),\ldots ,(x_{k},y_{k})}"/></span></dd></dl>
+               <p>donde todos los <i>x</i><sub><i>j</i></sub> se asumen distintos, el <b>polinomio interpolador en la forma de Lagrange</b> es la <a href="/wiki/Combinaci%C3%B3n_lineal" title="Combinación lineal">combinación lineal</a>
+               </p>
+               <dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle L(x)=\sum _{j=0}^{k}y_{j}\ell _{j}(x)}">
+                 <semantics>
+                   <mrow class="MJX-TeXAtom-ORD">
+                     <mstyle displaystyle="true" scriptlevel="0">
+                       <mi>L</mi>
+                       <mo stretchy="false">(</mo>
+                       <mi>x</mi>
+                       <mo stretchy="false">)</mo>
+                       <mo>=</mo>
+                       <munderover>
+                         <mo>&#x2211;<!-- ∑ --></mo>
+                         <mrow class="MJX-TeXAtom-ORD">
+                           <mi>j</mi>
+                           <mo>=</mo>
+                           <mn>0</mn>
+                         </mrow>
+                         <mrow class="MJX-TeXAtom-ORD">
+                           <mi>k</mi>
+                         </mrow>
+                       </munderover>
+                       <msub>
+                         <mi>y</mi>
+                         <mrow class="MJX-TeXAtom-ORD">
+                           <mi>j</mi>
+                         </mrow>
+                       </msub>
+                       <msub>
+                         <mi>&#x2113;<!-- ℓ --></mi>
+                         <mrow class="MJX-TeXAtom-ORD">
+                           <mi>j</mi>
+                         </mrow>
+                       </msub>
+                       <mo stretchy="false">(</mo>
+                       <mi>x</mi>
+                       <mo stretchy="false">)</mo>
+                     </mstyle>
+                   </mrow>
+                   <annotation encoding="application/x-tex">{\displaystyle L(x)=\sum _{j=0}^{k}y_{j}\ell _{j}(x)}</annotation>
+                 </semantics>
+               </math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/3efac1813dc95ce2528f24e65ae99123ca65139b" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -3.338ex; width:18.63ex; height:7.676ex;" alt="{\displaystyle L(x)=\sum _{j=0}^{k}y_{j}\ell _{j}(x)}"/></span></dd></dl>
+               <p>de bases polinómicas de Lagrange
+               </p>
+               <dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \ell _{j}(x)=\prod _{i=0,\,i\neq j}^{k}{\frac {x-x_{i}}{x_{j}-x_{i}}}={\frac {x-x_{0}}{x_{j}-x_{0}}}\cdots {\frac {x-x_{j-1}}{x_{j}-x_{j-1}}}{\frac {x-x_{j+1}}{x_{j}-x_{j+1}}}\cdots {\frac {x-x_{k}}{x_{j}-x_{k}}}}">
+                 <semantics>
+                   <mrow class="MJX-TeXAtom-ORD">
+                     <mstyle displaystyle="true" scriptlevel="0">
+                       <msub>
+                         <mi>&#x2113;<!-- ℓ --></mi>
+                         <mrow class="MJX-TeXAtom-ORD">
+                           <mi>j</mi>
+                         </mrow>
+                       </msub>
+                       <mo stretchy="false">(</mo>
+                       <mi>x</mi>
+                       <mo stretchy="false">)</mo>
+                       <mo>=</mo>
+                       <munderover>
+                         <mo>&#x220F;<!-- ∏ --></mo>
+                         <mrow class="MJX-TeXAtom-ORD">
+                           <mi>i</mi>
+                           <mo>=</mo>
+                           <mn>0</mn>
+                           <mo>,</mo>
+                           <mspace width="thinmathspace" />
+                           <mi>i</mi>
+                           <mo>&#x2260;<!-- ≠ --></mo>
+                           <mi>j</mi>
+                         </mrow>
+                         <mrow class="MJX-TeXAtom-ORD">
+                           <mi>k</mi>
+                         </mrow>
+                       </munderover>
+                       <mrow class="MJX-TeXAtom-ORD">
+                         <mfrac>
+                           <mrow>
+                             <mi>x</mi>
+                             <mo>&#x2212;<!-- − --></mo>
+                             <msub>
+                               <mi>x</mi>
+                               <mrow class="MJX-TeXAtom-ORD">
+                                 <mi>i</mi>
+                               </mrow>
+                             </msub>
+                           </mrow>
+                           <mrow>
+                             <msub>
+                               <mi>x</mi>
+                               <mrow class="MJX-TeXAtom-ORD">
+                                 <mi>j</mi>
+                               </mrow>
+                             </msub>
+                             <mo>&#x2212;<!-- − --></mo>
+                             <msub>
+                               <mi>x</mi>
+                               <mrow class="MJX-TeXAtom-ORD">
+                                 <mi>i</mi>
+                               </mrow>
+                             </msub>
+                           </mrow>
+                         </mfrac>
+                       </mrow>
+                       <mo>=</mo>
+                       <mrow class="MJX-TeXAtom-ORD">
+                         <mfrac>
+                           <mrow>
+                             <mi>x</mi>
+                             <mo>&#x2212;<!-- − --></mo>
+                             <msub>
+                               <mi>x</mi>
+                               <mrow class="MJX-TeXAtom-ORD">
+                                 <mn>0</mn>
+                               </mrow>
+                             </msub>
+                           </mrow>
+                           <mrow>
+                             <msub>
+                               <mi>x</mi>
+                               <mrow class="MJX-TeXAtom-ORD">
+                                 <mi>j</mi>
+                               </mrow>
+                             </msub>
+                             <mo>&#x2212;<!-- − --></mo>
+                             <msub>
+                               <mi>x</mi>
+                               <mrow class="MJX-TeXAtom-ORD">
+                                 <mn>0</mn>
+                               </mrow>
+                             </msub>
+                           </mrow>
+                         </mfrac>
+                       </mrow>
+                       <mo>&#x22EF;<!-- ⋯ --></mo>
+                       <mrow class="MJX-TeXAtom-ORD">
+                         <mfrac>
+                           <mrow>
+                             <mi>x</mi>
+                             <mo>&#x2212;<!-- − --></mo>
+                             <msub>
+                               <mi>x</mi>
+                               <mrow class="MJX-TeXAtom-ORD">
+                                 <mi>j</mi>
+                                 <mo>&#x2212;<!-- − --></mo>
+                                 <mn>1</mn>
+                               </mrow>
+                             </msub>
+                           </mrow>
+                           <mrow>
+                             <msub>
+                               <mi>x</mi>
+                               <mrow class="MJX-TeXAtom-ORD">
+                                 <mi>j</mi>
+                               </mrow>
+                             </msub>
+                             <mo>&#x2212;<!-- − --></mo>
+                             <msub>
+                               <mi>x</mi>
+                               <mrow class="MJX-TeXAtom-ORD">
+                                 <mi>j</mi>
+                                 <mo>&#x2212;<!-- − --></mo>
+                                 <mn>1</mn>
+                               </mrow>
+                             </msub>
+                           </mrow>
+                         </mfrac>
+                       </mrow>
+                       <mrow class="MJX-TeXAtom-ORD">
+                         <mfrac>
+                           <mrow>
+                             <mi>x</mi>
+                             <mo>&#x2212;<!-- − --></mo>
+                             <msub>
+                               <mi>x</mi>
+                               <mrow class="MJX-TeXAtom-ORD">
+                                 <mi>j</mi>
+                                 <mo>+</mo>
+                                 <mn>1</mn>
+                               </mrow>
+                             </msub>
+                           </mrow>
+                           <mrow>
+                             <msub>
+                               <mi>x</mi>
+                               <mrow class="MJX-TeXAtom-ORD">
+                                 <mi>j</mi>
+                               </mrow>
+                             </msub>
+                             <mo>&#x2212;<!-- − --></mo>
+                             <msub>
+                               <mi>x</mi>
+                               <mrow class="MJX-TeXAtom-ORD">
+                                 <mi>j</mi>
+                                 <mo>+</mo>
+                                 <mn>1</mn>
+                               </mrow>
+                             </msub>
+                           </mrow>
+                         </mfrac>
+                       </mrow>
+                       <mo>&#x22EF;<!-- ⋯ --></mo>
+                       <mrow class="MJX-TeXAtom-ORD">
+                         <mfrac>
+                           <mrow>
+                             <mi>x</mi>
+                             <mo>&#x2212;<!-- − --></mo>
+                             <msub>
+                               <mi>x</mi>
+                               <mrow class="MJX-TeXAtom-ORD">
+                                 <mi>k</mi>
+                               </mrow>
+                             </msub>
+                           </mrow>
+                           <mrow>
+                             <msub>
+                               <mi>x</mi>
+                               <mrow class="MJX-TeXAtom-ORD">
+                                 <mi>j</mi>
+                               </mrow>
+                             </msub>
+                             <mo>&#x2212;<!-- − --></mo>
+                             <msub>
+                               <mi>x</mi>
+                               <mrow class="MJX-TeXAtom-ORD">
+                                 <mi>k</mi>
+                               </mrow>
+                             </msub>
+                           </mrow>
+                         </mfrac>
+                       </mrow>
+                     </mstyle>
+                   </mrow>
+                   <annotation encoding="application/x-tex">{\displaystyle \ell _{j}(x)=\prod _{i=0,\,i\neq j}^{k}{\frac {x-x_{i}}{x_{j}-x_{i}}}={\frac {x-x_{0}}{x_{j}-x_{0}}}\cdots {\frac {x-x_{j-1}}{x_{j}-x_{j-1}}}{\frac {x-x_{j+1}}{x_{j}-x_{j+1}}}\cdots {\frac {x-x_{k}}{x_{j}-x_{k}}}}</annotation>
+                 </semantics>
+                </math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/2bf400efa9e4e037b04be80e576a821a21ac4222" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -3.505ex; width:69.824ex; height:7.843ex;" alt="{\displaystyle \ell _{j}(x)=\prod _{i=0,\,i\neq j}^{k}{\frac {x-x_{i}}{x_{j}-x_{i}}}={\frac {x-x_{0}}{x_{j}-x_{0}}}\cdots {\frac {x-x_{j-1}}{x_{j}-x_{j-1}}}{\frac {x-x_{j+1}}{x_{j}-x_{j+1}}}\cdots {\frac {x-x_{k}}{x_{j}-x_{k}}}}"/></span></dd></dl>
 
           </div>
      </div>
@@ -146,4 +425,5 @@ http://www.tooplate.com/view/2085-neuron
 <script src="js/custom.js"></script>
 
 </body>
+
 </html>
